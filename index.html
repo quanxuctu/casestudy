@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản Lý Sinh Viên</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body onload="renderListStudent()">
+<div class="form-student">
+
+    <h3>Add Infomation Students</h3>
+    <label>Name</label>
+    <input type="text" id="fullname" name="name" required="" placeholder="Full Name">
+    <span id="fullname-error" class="error"></span> <br>
+
+    <label>Address</label>
+    <input type="text" id="address" placeholder="Address">
+    <span id="address-error" class="error"></span> <br>
+
+    <label>Phone</label>
+    <input type="text" id="phone" placeholder="PhoneNumber">
+    <span id="phone-error" class="error"></span> <br>
+
+    <label>Email</label>
+    <input type="text" id="email" placeholder="abc@gmail.com">
+    <span id="email-error" class="error"></span> <br>
+
+    <label>Date Or Birth</label>
+    <input type="date" id="date" >
+    <span id="date-error" class="error"></span> <br>
+
+    <label>Gender</label>
+    <input type="radio" name="gender" id="male" value="Male" checked>Male
+    <input type="radio" name="gender" id="female" value="FeMale">FeMale <br>
+
+    <label>&nbsp;</label>
+    <br>
+
+    <button onclick="save()" type="submit">Save</button>
+
+</div>
+
+<div class="list-student">
+    <h3>List Students</h3>
+    <table id="view-students" width="800" border="1" cellpadding="0">
+
+
+    </table>
+</div>
+<script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+<script type="text/javascript" src="./js/student.js"></script>
+</body>
+</html>
